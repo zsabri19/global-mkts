@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Profile | Zeeshan Sabri - The Clarity Architect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 10pt;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background: white;
+    }
+    
+    .header {
+      background: #0A1628;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28pt;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .header .title {
+      font-size: 14pt;
+      color: #C9A227;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    
+    .header .tagline {
+      font-style: italic;
+      font-size: 11pt;
+      color: rgba(255,255,255,0.8);
+    }
+    
+    .quick-stats {
+      display: flex;
+      justify-content: space-around;
+      background: #f8f9fa;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-left: 4px solid #E53935;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 24pt;
+      font-weight: 700;
+      color: #E53935;
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 8pt;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16pt;
+      color: #0A1628;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #E53935;
+      padding-bottom: 5px;
+    }
+    
+    h3 {
+      font-size: 12pt;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      margin-bottom: 12px;
+      text-align: justify;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #0A1628, #1E3A5F);
+      color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    
+    .highlight-box p {
+      text-align: left;
+      margin-bottom: 0;
+      font-size: 11pt;
+      line-height: 1.7;
+    }
+    
+    .two-column {
+      display: flex;
+      gap: 25px;
+      margin: 20px 0;
+    }
+    
+    .column {
+      flex: 1;
+    }
+    
+    ul {
+      margin-left: 18px;
+      margin-bottom: 12px;
+    }
+    
+    li {
+      margin-bottom: 6px;
+    }
+    
+    .framework-list {
+      background: #f8f9fa;
+      padding: 15px;
+      margin: 15px 0;
+    }
+    
+    .framework-list h4 {
+      font-size: 10pt;
+      color: #E53935;
+      margin-bottom: 8px;
+    }
+    
+    .framework-item {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .framework-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    
+    .framework-name {
+      font-weight: 600;
+      color: #0A1628;
+    }
+    
+    .framework-tagline {
+      font-size: 9pt;
+      color: #666;
+      font-style: italic;
+    }
+    
+    .awards {
+      background: #f8f9fa;
+      padding: 15px;
+      border-left: 3px solid #C9A227;
+    }
+    
+    .award-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .award-icon {
+      color: #C9A227;
+      font-size: 12pt;
+    }
+    
+    .contact-section {
+      background: #0A1628;
+      color: white;
+      padding: 25px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    .contact-section h2 {
+      color: white;
+      border-bottom: 2px solid #C9A227;
+      margin-top: 0;
+    }
+    
+    .contact-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .contact-item {
+      text-align: center;
+    }
+    
+    .contact-label {
+      font-size: 8pt;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    
+    .contact-value {
+      font-size: 10pt;
+      color: #C9A227;
+    }
+    
+    .footer {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      font-size: 8pt;
+      color: #666;
+      text-align: center;
+    }
+    
+    .page-break {
+      page-break-before: always;
+    }
+    
+    .expertise-tag {
+      display: inline-block;
+      background: #E53935;
+      color: white;
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-size: 8pt;
+      font-weight: 600;
+      margin: 2px;
+    }
+    
+    .expertise-area {
+      margin-bottom: 15px;
+    }
+    
+    .expertise-area h4 {
+      font-size: 10pt;
+      color: #0A1628;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Zeeshan Sabri</h1>
+    <div class="title">The Clarity Architect</div>
+    <div class="tagline">"Fix the Human OS before the System OS"</div>
+  </div>
+
+  <div class="quick-stats">
+    <div class="stat">
+      <span class="stat-number">$50M+</span>
+      <span class="stat-label">Value Created</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">97.6%</span>
+      <span class="stat-label">Excellence Rating</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">20+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">6</span>
+      <span class="stat-label">GCC Markets</span>
+    </div>
+  </div>
+
+  <h2>Executive Summary</h2>
+  <p>Transformation Architect and creator of five proprietary operating systems (HumanOS™, ClarityOS™, GovernanceOS™, Crisis-to-Clarity™, TalentOS™) that help founders and executives turn organizational chaos into structured, scalable growth. With 20+ years leading transformations across Fortune 500 enterprises, GCC government initiatives, and startup ecosystems, Zeeshan brings a unique philosophy: <strong>"Fix the Human OS before the System OS."</strong></p>
+
+  <p>Former Fortune 500 executive (Huawei, Motorola) with $80M+ portfolio management experience and zero security breach track record. Today, Founder of Kuantum (GCC Market Access Architecture) and Creator of ClarityOS (Personal Transformation System).</p>
+
+  <div class="highlight-box">
+    <p>"I help founders & executives turn chaos into structured, scalable growth. The difference between failed and successful transformation isn't better software—it's fixing the human layer first. Systems don't create discipline. Discipline creates the safety for systems to work."</p>
+  </div>
+
+  <h2>Proprietary Frameworks™</h2>
+  
+  <div class="framework-list">
+    <div class="framework-item">
+      <div class="framework-name">HumanOS™</div>
+      <div class="framework-tagline">"Fix the Human OS before the System OS" — Addressing the Investment Paradox (90% System, 0% Human)</div>
+    </div>
+    <div class="framework-item">
+      <div class="framework-name">ClarityOS™</div>
+      <div class="framework-tagline">"From Crisis to Clarity" — World's first Pre-Governance Operating System</div>
+    </div>
+    <div class="framework-item">
+      <div class="framework-name">GovernanceOS™</div>
+      <div class="framework-tagline">"Governance is the engine of performance" — Audit-ready AI systems from day one</div>
+    </div>
+    <div class="framework-item">
+      <div class="framework-name">Crisis-to-Clarity™</div>
+      <div class="framework-tagline">Transformation methodology for crisis navigation and strategic clarity</div>
+    </div>
+    <div class="framework-item">
+      <div class="framework-name">TalentOS™</div>
+      <div class="framework-tagline">Capability architect development and workforce transformation</div>
+    </div>
+  </div>
+
+  <h2>Track Record & Results</h2>
+  
+  <h3>Governance Excellence</h3>
+  <ul>
+    <li><strong>97.6%</strong> excellence rating in national defense procurement (KSA)</li>
+    <li><strong>$5.5M+</strong> in documented efficiency gains through governance implementation</li>
+    <li><strong>$1.2M</strong> saved through governance framework deployment (Bahrain)</li>
+    <li><strong>50%</strong> reduction in operational firefighting</li>
+    <li><strong>$80M+</strong> portfolios managed with <strong>zero security breaches</strong></li>
+  </ul>
+
+  <h3>Transformation Impact</h3>
+  <ul>
+    <li><strong>$50M+</strong> enterprise value created across GCC transformations</li>
+    <li><strong>1,000+</strong> professionals trained in 6 GCC countries</li>
+    <li><strong>50+</strong> workshops delivered on AI, governance, and procurement</li>
+    <li><strong>14</strong> proven business frameworks codified and deployed</li>
+    <li><strong>200+</strong> people trained as Capability Architects</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <h2>Areas of Expertise</h2>
+  
+  <div class="two-column">
+    <div class="column">
+      <div class="expertise-area">
+        <h4>Strategic Transformation</h4>
+        <span class="expertise-tag">Digital Transformation</span>
+        <span class="expertise-tag">Procurement Excellence</span>
+        <span class="expertise-tag">Change Management</span>
+        <span class="expertise-tag">GCC Market Entry</span>
+      </div>
+      
+      <div class="expertise-area">
+        <h4>AI & Technology</h4>
+        <span class="expertise-tag">AI Governance</span>
+        <span class="expertise-tag">NIST AI RMF</span>
+        <span class="expertise-tag">EU AI Act</span>
+        <span class="expertise-tag">Human-AI Synergy</span>
+      </div>
+      
+      <div class="expertise-area">
+        <h4>Organizational Design</h4>
+        <span class="expertise-tag">HumanOS</span>
+        <span class="expertise-tag">Capability Architecture</span>
+        <span class="expertise-tag">Culture Transformation</span>
+        <span class="expertise-tag">Leadership Development</span>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="expertise-area">
+        <h4>Governance & Risk</h4>
+        <span class="expertise-tag">Enterprise Governance</span>
+        <span class="expertise-tag">Risk Management</span>
+        <span class="expertise-tag">Compliance</span>
+        <span class="expertise-tag">Zero-Breach Security</span>
+      </div>
+      
+      <div class="expertise-area">
+        <h4>Regional Expertise</h4>
+        <span class="expertise-tag">GCC Markets</span>
+        <span class="expertise-tag">Saudi Vision 2030</span>
+        <span class="expertise-tag">Oman Vision 2040</span>
+        <span class="expertise-tag">MENA Business</span>
+      </div>
+      
+      <div class="expertise-area">
+        <h4>Sector Experience</h4>
+        <span class="expertise-tag">Defense & Government</span>
+        <span class="expertise-tag">Telecom</span>
+        <span class="expertise-tag">Banking & Finance</span>
+        <span class="expertise-tag">Aviation</span>
+      </div>
+    </div>
+  </div>
+
+  <h2>Awards & Recognition</h2>
+  
+  <div class="awards">
+    <div class="award-item">
+      <span class="award-icon">🏆</span>
+      <div><strong>Entrepreneurial Excellence Award</strong><br>Founders 2.0 Conference, Dubai 2025</div>
+    </div>
+    <div class="award-item">
+      <span class="award-icon">🎤</span>
+      <div><strong>Featured Speaker</strong><br>Kuwait Procurement Summit 2026 (CIPS MENA)</div>
+    </div>
+    <div class="award-item">
+      <span class="award-icon">⭐</span>
+      <div><strong>TechCrunch Nomination</strong><br>VR/AI Learning Management Platform, 2024</div>
+    </div>
+    <div class="award-item">
+      <span class="award-icon">👨‍🏫</span>
+      <div><strong>Best Mentor Award</strong><br>Huawei Intern Program, 2017</div>
+    </div>
+  </div>
+
+  <h2>Professional Background</h2>
+  
+  <h3>Current Roles</h3>
+  <ul>
+    <li><strong>Founder, Kuantum</strong> — GCC Market Access Architecture for enterprises</li>
+    <li><strong>Creator, ClarityOS</strong> — Personal transformation and clarity systems</li>
+    <li><strong>Mentor, Oman Startup Hub</strong> — Advisory for GCC startup ecosystem (since 2024)</li>
+    <li><strong>Expert, SCMDOJO</strong> — Procurement and supply chain thought leadership</li>
+  </ul>
+
+  <h3>Former Roles</h3>
+  <ul>
+    <li><strong>Fortune 500 Executive</strong> — Huawei, Motorola ($80M+ portfolios)</li>
+    <li><strong>Transformation Leader</strong> — 6 GCC markets, government & enterprise</li>
+    <li><strong>Procurement Strategist</strong> — Zero-breach security track record</li>
+  </ul>
+
+  <h3>Certifications & Affiliations</h3>
+  <ul>
+    <li>Chartered Member, CIPS (Chartered Institute of Procurement & Supply)</li>
+    <li>Project Management Professional (PMP)</li>
+    <li>Member, CXO Global</li>
+    <li>AI Certified Trainer</li>
+  </ul>
+
+  <h2>Origin Story</h2>
+  <p>Born in Kuwait, displaced by the Gulf War to Pakistan at age 5, returned to Kuwait in 1992. The experience of exile and return forged a perspective that sees transformation through crisis—a philosophy that underlies all frameworks today.</p>
+  
+  <p>From cricket fields in Kuwait to Fortune 500 boardrooms, from a refugee passport to GCC transformation leader—every framework, every system, every insight comes from lived experience. The journey from 1989 to 2026 is documented in the forthcoming memoir <em>"From Exile to Transformation: A Memoir Beyond Techniques."</em></p>
+
+  <div class="contact-section">
+    <h2>Connect & Engage</h2>
+    <p style="margin-bottom: 20px;">Available for keynote speaking, workshop facilitation, advisory engagements, and transformation consulting.</p>
+    
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-label">Website</div>
+        <div class="contact-value">global-mkts.com</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">@zeeshan-sabri</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Instagram</div>
+        <div class="contact-value">@zsabri</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Muscat, Oman</div>
+      </div>
+    </div>
+    
+    <p style="margin-top: 25px; font-style: italic; color: rgba(255,255,255,0.7);">DM "CLARITY" for inquiries</p>
+  </div>
+
+  <div class="footer">
+    <p>© 2026 Zeeshan Sabri. All rights reserved.</p>
+    <p>For speaking engagements, media requests, or transformation consulting: zeeshan@global-mkts.com</p>
+  </div>
+</body>
+</html>

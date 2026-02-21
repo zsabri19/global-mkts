@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies | Market Access Victories</title>
+  <meta name="description" content="Real outcomes from real GCC market access engagements. See how Kuantum helps organizations successfully expand into Gulf markets.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/design-system.css">
+  
+  <!-- Modal Styles -->
+  <style>
+    /* Modal System */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 22, 40, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-container {
+      background: linear-gradient(180deg, #0F1B2E 0%, #0A1628 100%);
+      border-radius: 24px;
+      width: 100%;
+      max-width: 900px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      transform: scale(0.9) translateY(20px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+    }
+    
+    .modal-overlay.active .modal-container {
+      transform: scale(1) translateY(0);
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+    
+    .modal-close:hover {
+      background: rgba(229, 57, 53, 0.8);
+      transform: rotate(90deg);
+    }
+    
+    /* Modal Hero */
+    .modal-hero {
+      position: relative;
+      padding: 60px 40px 40px;
+      background: linear-gradient(135deg, rgba(229, 57, 53, 0.1) 0%, rgba(10, 22, 40, 0) 50%);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .modal-hero-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #E53935, #C62828);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+      box-shadow: 0 20px 40px rgba(229, 57, 53, 0.3);
+    }
+    
+    .modal-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(229, 57, 53, 0.2);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #E53935;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    
+    .modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    
+    .modal-subtitle {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.6);
+      font-style: italic;
+    }
+    
+    /* Modal Stats */
+    .modal-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 30px 40px;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .modal-stat {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .modal-stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #E53935;
+      display: block;
+      line-height: 1;
+    }
+    
+    .modal-stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 8px;
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      padding: 40px;
+    }
+    
+    .modal-section {
+      margin-bottom: 32px;
+    }
+    
+    .modal-section:last-child {
+      margin-bottom: 0;
+    }
+    
+    .modal-section-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #C9A227;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .modal-section-title::before {
+      content: '';
+      width: 4px;
+      height: 20px;
+      background: #C9A227;
+      border-radius: 2px;
+    }
+    
+    .modal-text {
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+    
+    .modal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .modal-list li {
+      padding: 12px 0;
+      padding-left: 32px;
+      position: relative;
+      color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .modal-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .modal-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background: rgba(229, 57, 53, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #E53935;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+    
+    /* Modal Quote */
+    .modal-quote {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.1), rgba(201, 162, 39, 0.05));
+      border-left: 4px solid #C9A227;
+      padding: 24px 28px;
+      border-radius: 0 16px 16px 0;
+      margin: 24px 0;
+    }
+    
+    .modal-quote-text {
+      font-style: italic;
+      color: rgba(255,255,255,0.8);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .modal-quote-author {
+      color: #C9A227;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    /* Modal Framework Tags */
+    .modal-frameworks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    
+    .modal-framework-tag {
+      padding: 8px 16px;
+      background: rgba(229, 57, 53, 0.15);
+      border: 1px solid rgba(229, 57, 53, 0.3);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #E53935;
+      font-weight: 600;
+    }
+    
+    /* Case Study Cards */
+    .case-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 32px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #E53935, #C9A227);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .case-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(229, 57, 53, 0.3);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+    }
+    
+    .case-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .case-card-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, rgba(229, 57, 53, 0.2), rgba(229, 57, 53, 0.1));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .case-card:hover .case-card-icon {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #E53935, #C62828);
+    }
+    
+    .case-card-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(229, 57, 53, 0.1);
+      border-radius: 12px;
+      font-size: 0.7rem;
+      color: #E53935;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    
+    .case-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    
+    .case-card-desc {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .case-card-stats {
+      display: flex;
+      gap: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .case-card-stat {
+      text-align: center;
+    }
+    
+    .case-card-stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #E53935;
+      display: block;
+    }
+    
+    .case-card-stat-label {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+    }
+    
+    .case-card-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      color: #E53935;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: gap 0.2s ease;
+    }
+    
+    .case-card:hover .case-card-cta {
+      gap: 12px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .modal-container {
+        max-height: 95vh;
+        border-radius: 16px;
+      }
+      
+      .modal-hero {
+        padding: 40px 24px 30px;
+      }
+      
+      .modal-title {
+        font-size: 1.75rem;
+      }
+      
+      .modal-stats {
+        grid-template-columns: 1fr;
+        padding: 20px 24px;
+      }
+      
+      .modal-content {
+        padding: 24px;
+      }
+      
+      .case-card {
+        padding: 24px;
+      }
+    }
+    
+    /* Scrollbar for modal */
+    .modal-container::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .modal-container::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.05);
+    }
+    
+    .modal-container::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.2);
+      border-radius: 4px;
+    }
+    
+    .modal-container::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.3);
+    }
+  </style>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23E53935' width='100' height='100'/></svg>">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/kuantum-logo-white.png" alt="Kuantum" style="height: 32px; width: auto;">
+        </a>
+        
+        <div class="nav-links">
+          <div class="nav-dropdown">
+            <a href="kuantum.html" class="nav-link">Kuantum →</a>
+            <div class="nav-dropdown-content">
+              <a href="kuantum.html" class="nav-dropdown-item">Overview</a>
+              <a href="kuantum.html#gtm" class="nav-dropdown-item">GTM Strategy</a>
+              <a href="kuantum.html#pilot" class="nav-dropdown-item">Pilot Programs</a>
+              <a href="kuantum.html#enterprise" class="nav-dropdown-item">Enterprise Solutions</a>
+              <a href="contact.html?type=discovery" class="nav-dropdown-item">Schedule Discovery</a>
+            </div>
+          </div>
+          
+          <div class="nav-dropdown">
+            <a href="clarityos.html" class="nav-link">ClarityOS →</a>
+            <div class="nav-dropdown-content">
+              <a href="clarityos.html" class="nav-dropdown-item">Overview</a>
+              <a href="clarityos.html#how-it-works" class="nav-dropdown-item">How It Works</a>
+              <a href="clarityos.html#pricing" class="nav-dropdown-item">Pricing ($79)</a>
+              <a href="https://calendly.com/zsabri/clarityos-personal-assistant?hide_gdpr_banner=1&primary_color=1a5c5b" class="nav-dropdown-item" target="_blank">Book Session</a>
+              <a href="clarityos.html#faq" class="nav-dropdown-item">FAQ</a>
+            </div>
+          </div>
+          
+          <a href="about.html" class="nav-link">About</a>
+          <a href="case-studies.html" class="nav-link" style="color: var(--kuantum-red);">Case Studies</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(ellipse at top right, rgba(229, 57, 53, 0.1), transparent 70%);"></div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <p class="text-caption text-gray mb-4 reveal">
+          <a href="index.html" style="color: var(--gray-500);">Home</a> / Case Studies
+        </p>
+        
+        <h1 class="hero-title reveal">
+          <span>Market Access</span>
+          <span class="highlight-kuantum">Victories</span>
+        </h1>
+        
+        <p class="hero-description reveal">
+          Real outcomes from real engagements. Click any case study to explore the full story—
+          challenges faced, solutions implemented, and results achieved.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="section" style="background: linear-gradient(180deg, var(--navy-800), var(--navy-900));">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <p class="text-caption text-kuantum mb-4">Brand Story</p>
+        <h2 class="text-h1 mb-6">Kuantum in Motion</h2>
+      </div>
+      
+      <div class="grid grid-2 gap-6 stagger-children">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; background: var(--navy-800);">
+          <video controls style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+            <source src="assets/videos/kuantum-brand-2.mp4" type="video/mp4">
+          </video>
+          <div style="padding: var(--space-4);">
+            <p class="text-body">Brand Introduction</p>
+          </div>
+        </div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; background: var(--navy-800);">
+          <video controls style="width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+            <source src="assets/videos/kuantum-brand-3.mp4" type="video/mp4">
+          </video>
+          <div style="padding: var(--space-4);">
+            <p class="text-body">Market Access Framework</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <p class="text-caption text-kuantum mb-4">Success Stories</p>
+        <h2 class="text-h1 mb-6">Click to Explore</h2>
+        <p class="text-body-lg">
+          Each case study represents a real transformation journey. Click any card to dive deep into the methodology, challenges, and measurable outcomes.
+        </p>
+      </div>
+      
+      <div class="grid grid-3 gap-6 stagger-children">
+        
+        <!-- Case Study 1: SuperJet -->
+        <div class="case-card" onclick="openModal('superjet')">
+          <div class="case-card-icon">✈️</div>
+          <span class="case-card-tag">Aviation • GCC Expansion</span>
+          <h3 class="case-card-title">SuperJet GCC Market Entry</h3>
+          <p class="case-card-desc">
+            Strategic advisory for Russian aviation manufacturer entering Gulf markets with localized partnership strategy and regulatory navigation.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">3</span>
+              <span class="case-card-stat-label">Markets Opened</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">5</span>
+              <span class="case-card-stat-label">Local Partners</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 2: MDS Oman -->
+        <div class="case-card" onclick="openModal('mds')">
+          <div class="case-card-icon">🏭</div>
+          <span class="case-card-tag">Procurement • Oman</span>
+          <h3 class="case-card-title">MDS Oman Procurement Reset</h3>
+          <p class="case-card-desc">
+            Complete transformation of procurement function from operational chaos to strategic control using governance-first methodology.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">40%</span>
+              <span class="case-card-stat-label">Cost Reduction</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">0</span>
+              <span class="case-card-stat-label">Security Incidents</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 3: Data Center -->
+        <div class="case-card" onclick="openModal('datacenter')">
+          <div class="case-card-icon">🖥️</div>
+          <span class="case-card-tag">Infrastructure • Oman</span>
+          <h3 class="case-card-title">MDS Data Center Growth</h3>
+          <p class="case-card-desc">
+            Strategic procurement for hyperscale data center expansion with sustainability compliance and zero-downtime requirements.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">50MW</span>
+              <span class="case-card-stat-label">Capacity Added</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">30%</span>
+              <span class="case-card-stat-label">Energy Efficiency</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 4: Digital Bank -->
+        <div class="case-card" onclick="openModal('digitalbank')">
+          <div class="case-card-icon">🏦</div>
+          <span class="case-card-tag">Digital Banking • Oman</span>
+          <h3 class="case-card-title">First Sharia-Compliant Digital Bank</h3>
+          <p class="case-card-desc">
+            Procurement architecture for Oman's first fully Sharia-compliant digital banking platform—from vendor selection to execution.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">$12M</span>
+              <span class="case-card-stat-label">Budget Managed</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">100%</span>
+              <span class="case-card-stat-label">Sharia Compliance</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 5: InsurTech -->
+        <div class="case-card" onclick="openModal('insurtech')">
+          <div class="case-card-icon">🛡️</div>
+          <span class="case-card-tag">Insurance • Oman</span>
+          <h3 class="case-card-title">TameenX InsurTech Accelerator</h3>
+          <p class="case-card-desc">
+            Oman's first InsurTech accelerator—designing the procurement and vendor ecosystem for digital insurance innovation.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">1st</span>
+              <span class="case-card-stat-label">in Oman</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">12</span>
+              <span class="case-card-stat-label">Startups Onboarded</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 6: Central Bank -->
+        <div class="case-card" onclick="openModal('cbo')">
+          <div class="case-card-icon">🏛️</div>
+          <span class="case-card-tag">Public Sector • GCC</span>
+          <h3 class="case-card-title">Central Bank AI Advisory</h3>
+          <p class="case-card-desc">
+            Comprehensive AI in Procurement advisory for Central Bank of Oman—building governance frameworks for responsible AI adoption.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">CBO</span>
+              <span class="case-card-stat-label">Oman Central Bank</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">NIST</span>
+              <span class="case-card-stat-label">AI RMF Aligned</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 7: BOOST KSA -->
+        <div class="case-card" onclick="openModal('boost')">
+          <div class="case-card-icon">📚</div>
+          <span class="case-card-tag">Training • KSA</span>
+          <h3 class="case-card-title">BOOST KSA/NCM Training</h3>
+          <p class="case-card-desc">
+            Large-scale procurement transformation training for Saudi National Company Management (NCM) and government teams.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">KSA</span>
+              <span class="case-card-stat-label">Saudi Arabia</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">100+</span>
+              <span class="case-card-stat-label">Professionals</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 8: Defense Procurement -->
+        <div class="case-card" onclick="openModal('defense')">
+          <div class="case-card-icon">🎯</div>
+          <span class="case-card-tag">Defense • KSA</span>
+          <h3 class="case-card-title">National Defense Procurement Excellence</h3>
+          <p class="case-card-desc">
+            Transformation of national defense procurement achieving 97.6% excellence rating through HumanOS and GovernanceOS implementation.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">97.6%</span>
+              <span class="case-card-stat-label">Excellence</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">$5.5M</span>
+              <span class="case-card-stat-label">Efficiency Gains</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+        <!-- Case Study 9: Aviation AI -->
+        <div class="case-card" onclick="openModal('aviation')">
+          <div class="case-card-icon">🚀</div>
+          <span class="case-card-tag">Aviation • Oman</span>
+          <h3 class="case-card-title">AI Governance-First Implementation</h3>
+          <p class="case-card-desc">
+            Deploying AI with guardrails intact from day one—NIST AI RMF aligned governance for aviation sector innovation.
+          </p>
+          <div class="case-card-stats">
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">100%</span>
+              <span class="case-card-stat-label">Audit Ready</span>
+            </div>
+            <div class="case-card-stat">
+              <span class="case-card-stat-value">3x</span>
+              <span class="case-card-stat-label">Faster Deploy</span>
+            </div>
+          </div>
+          <div class="case-card-cta">
+            Read Full Case Study →
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL: SuperJet -->
+  <div class="modal-overlay" id="modal-superjet" onclick="closeModal(event, 'superjet')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'superjet')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">✈️</div>
+        <span class="modal-tag">Aviation • GCC Market Entry</span>
+        <h2 class="modal-title">SuperJet GCC Market Entry</h2>
+        <p class="modal-subtitle">Strategic advisory for Russian aviation manufacturer entering Gulf markets</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">3</span>
+          <span class="modal-stat-label">GCC Markets Opened</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">5</span>
+          <span class="modal-stat-label">Strategic Partners</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">18mo</span>
+          <span class="modal-stat-label">Time to Market</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            SuperJet, a Russian aviation manufacturer, sought to expand into GCC markets but faced significant challenges: complex regulatory environments across 6 different jurisdictions, cultural business nuances, geopolitical sensitivities, and the need for localized partnership strategies. Traditional market entry approaches had failed in this sector before.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>Comprehensive GCC regulatory mapping and compliance pathway design</li>
+            <li>Cultural bridge architecture—adapting business practices to local norms</li>
+            <li>Strategic partner identification and vetting across aviation sector</li>
+            <li>Governance-first negotiation framework protecting all parties</li>
+            <li>Phased market entry sequence (UAE first, then Oman, then Kuwait)</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>Successful market entry in UAE, Oman, and Kuwait within 18 months</li>
+            <li>5 strategic partnerships established with local aviation firms</li>
+            <li>Zero regulatory compliance issues throughout expansion</li>
+            <li>Replicable playbook created for future GCC expansion</li>
+            <li>Cultural credibility established for long-term presence</li>
+          </ul>
+        </div>
+        
+        <div class="modal-quote">
+          <p class="modal-quote-text">
+            "Zeeshan's understanding of GCC business culture is unmatched. He bridges East-West dynamics with a respect that builds trust on both sides. That's rare in this industry."
+          </p>
+          <p class="modal-quote-author">— Vice President, Regional Expansion, SuperJet</p>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">GCC Market Entry Architecture</span>
+          <span class="modal-framework-tag">Cultural Bridge</span>
+          <span class="modal-framework-tag">GovernanceOS™</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: MDS Oman -->
+  <div class="modal-overlay" id="modal-mds" onclick="closeModal(event, 'mds')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'mds')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">🏭</div>
+        <span class="modal-tag">Procurement Transformation • Oman</span>
+        <h2 class="modal-title">MDS Oman Procurement Reset</h2>
+        <p class="modal-subtitle">From operational chaos to strategic control</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">40%</span>
+          <span class="modal-stat-label">Cost Reduction</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">60%</span>
+          <span class="modal-stat-label">Faster Procurement</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">0</span>
+          <span class="modal-stat-label">Security Incidents</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            MDS Oman, a major industrial conglomerate, was trapped in procurement chaos. Processes were ad-hoc, vendor management was reactive, compliance was an afterthought, and the procurement team operated as "order-takers" rather than strategic partners. Firefighting consumed 80% of their time.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>HumanOS Assessment—identifying identity and behavior gaps</li>
+            <li>GovernanceOS™ implementation with audit-ready frameworks</li>
+            <li>Capability Architect training—transforming clerks into strategists</li>
+            <li>Vendor lifecycle management system from selection to offboarding</li>
+            <li>Risk-weighted procurement protocols and compliance automation</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>40% reduction in procurement costs within 12 months</li>
+            <li>Procurement cycle time reduced from 45 days to 18 days</li>
+            <li>Zero security breaches across $20M+ annual procurement</li>
+            <li>Team capability score increased from 4.2 to 8.7 out of 10</li>
+            <li>Rebalanced operations: 30% reactive, 70% strategic</li>
+          </ul>
+        </div>
+        
+        <div class="modal-quote">
+          <p class="modal-quote-text">
+            "The governance-first approach transformed how we think about procurement. We didn't just save money—we built capabilities that will outlast any individual consultant."
+          </p>
+          <p class="modal-quote-author">— Chief Procurement Officer, MDS Oman</p>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">HumanOS™</span>
+          <span class="modal-framework-tag">GovernanceOS™</span>
+          <span class="modal-framework-tag">Capability Architect</span>
+          <span class="modal-framework-tag">Zero-Breach Procurement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Data Center -->
+  <div class="modal-overlay" id="modal-datacenter" onclick="closeModal(event, 'datacenter')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'datacenter')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">🖥️</div>
+        <span class="modal-tag">Infrastructure • Oman</span>
+        <h2 class="modal-title">MDS Data Center Growth</h2>
+        <p class="modal-subtitle">Hyperscale expansion with sustainability and zero-downtime requirements</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">50MW</span>
+          <span class="modal-stat-label">Capacity Added</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">30%</span>
+          <span class="modal-stat-label">Energy Efficiency</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">99.99%</span>
+          <span class="modal-stat-label">Uptime Achieved</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            MDS required a 50MW hyperscale data center expansion to meet growing cloud demand. The challenge: zero downtime tolerance, stringent sustainability requirements (Oman's green initiative), complex vendor ecosystem coordination, and security compliance for financial services clients.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>Modular procurement strategy enabling phased capacity additions</li>
+            <li>Sustainability-weighted vendor scoring system</li>
+            <li>Critical path management across 15+ concurrent vendor contracts</li>
+            <li>Security-first infrastructure design and compliance validation</li>
+            <li>24/7 migration coordination with zero business impact</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>50MW capacity added with zero unplanned downtime</li>
+            <li>30% improvement in Power Usage Effectiveness (PUE)</li>
+            <li>100% compliance with Oman's green data center standards</li>
+            <li>Seamless migration of 200+ enterprise clients</li>
+            <li>Established as preferred provider for financial sector</li>
+          </ul>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">Risk-Adjusted Innovation</span>
+          <span class="modal-framework-tag">Zero-Breach Procurement</span>
+          <span class="modal-framework-tag">Stakeholder Alignment Matrix</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Digital Bank -->
+  <div class="modal-overlay" id="modal-digitalbank" onclick="closeModal(event, 'digitalbank')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'digitalbank')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">🏦</div>
+        <span class="modal-tag">Digital Banking • Oman</span>
+        <h2 class="modal-title">First Sharia-Compliant Digital Bank</h2>
+        <p class="modal-subtitle">Procurement architecture for Oman's first fully Sharia-compliant digital bank</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">$12M</span>
+          <span class="modal-stat-label">Budget Managed</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">100%</span>
+          <span class="modal-stat-label">Sharia Compliance</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">0</span>
+          <span class="modal-stat-label">Security Breaches</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            Launching a digital bank requires balancing speed-to-market with rigorous compliance. In Oman, this meant navigating both traditional banking regulations and Sharia compliance standards—two complex frameworks that don't always align. The procurement of core banking systems, payment infrastructure, and cloud services had to satisfy both CBO (Central Bank of Oman) requirements and Sharia board oversight.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>Governance-first vendor assessment with dual compliance tracks</li>
+            <li>Sharia board integration in procurement workflow from day one</li>
+            <li>Risk-weighted vendor scoring balancing innovation and stability</li>
+            <li>Zero-breach security protocols embedded in all contracts</li>
+            <li>Phased vendor onboarding aligned with licensing milestones</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>Successfully launched as Oman's first Sharia-compliant digital bank</li>
+            <li>100% Sharia compliance maintained across all vendor contracts</li>
+            <li>Zero security incidents throughout build and launch phases</li>
+            <li>Regulatory approval achieved 3 months ahead of schedule</li>
+            <li>$12M procurement budget delivered on time and under budget</li>
+          </ul>
+        </div>
+        
+        <div class="modal-quote">
+          <p class="modal-quote-text">
+            "Zeeshan's framework allowed us to move fast without breaking things. The Sharia compliance integration was seamless—something we couldn't have achieved with traditional procurement approaches."
+          </p>
+          <p class="modal-quote-author">— Chief Procurement Officer, Digital Bank Oman</p>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">GovernanceOS™</span>
+          <span class="modal-framework-tag">Zero-Breach Procurement</span>
+          <span class="modal-framework-tag">Crisis-to-Clarity™</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: InsurTech -->
+  <div class="modal-overlay" id="modal-insurtech" onclick="closeModal(event, 'insurtech')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'insurtech')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">🛡️</div>
+        <span class="modal-tag">Insurance • Oman</span>
+        <h2 class="modal-title">TameenX InsurTech Accelerator</h2>
+        <p class="modal-subtitle">Oman's first InsurTech accelerator—building the digital insurance ecosystem</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">1st</span>
+          <span class="modal-stat-label">in Oman</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">12</span>
+          <span class="modal-stat-label">Startups Onboarded</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">$2M</span>
+          <span class="modal-stat-label">Ecosystem Value</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            Oman's insurance sector needed innovation but lacked the ecosystem to support InsurTech startups. TameenX was conceived as the solution—Oman's first InsurTech accelerator—but required designing the entire vendor ecosystem, partnership framework, and procurement infrastructure from scratch.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>Accelerator vendor ecosystem architecture and partner onboarding</li>
+            <li>Startup-friendly procurement frameworks with scaled governance</li>
+            <li>Insurance regulatory compliance integration for all participants</li>
+            <li>Mentor and service provider procurement and management</li>
+            <li>Investment readiness assessment and vendor due diligence</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>First InsurTech accelerator successfully launched in Oman</li>
+            <li>12 startups onboarded across 3 cohorts</li>
+            <li>$2M+ in ecosystem value created within first year</li>
+            <li>Replicable accelerator model now being exported regionally</li>
+            <li>3 startups secured follow-on funding through program</li>
+          </ul>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">GCC Market Entry</span>
+          <span class="modal-framework-tag">Knowledge Transfer Protocol</span>
+          <span class="modal-framework-tag">Stakeholder Alignment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CBO -->
+  <div class="modal-overlay" id="modal-cbo" onclick="closeModal(event, 'cbo')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'cbo')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">🏛️</div>
+        <span class="modal-tag">Public Sector • Oman</span>
+        <h2 class="modal-title">Central Bank AI Advisory</h2>
+        <p class="modal-subtitle">Building governance frameworks for responsible AI adoption in procurement</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">NIST</span>
+          <span class="modal-stat-label">AI RMF Aligned</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">100%</span>
+          <span class="modal-stat-label">Audit Ready</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">Regional</span>
+          <span class="modal-stat-label">Framework Model</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            Central Bank of Oman recognized AI's transformative potential for procurement but needed a governance framework that ensured responsible adoption. The challenge: balancing innovation with risk management, ensuring audit readiness, and creating guidelines that other GCC central banks could adopt.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>NIST AI Risk Management Framework (AI RMF) adaptation for GCC context</li>
+            <li>Governance-first AI deployment protocols and approval workflows</li>
+            <li>Risk-weighted AI use case classification system</li>
+            <li>Human-in-the-loop requirements for high-risk decisions</li>
+            <li>Continuous monitoring and governance health dashboards</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>AI governance framework adopted as CBO standard</li>
+            <li>100% audit readiness for all AI procurement systems</li>
+            <li>Framework now being adopted by other GCC central banks</li>
+            <li>EU AI Act compliance roadmap established proactively</li>
+            <li>3x faster AI deployment through clear governance</li>
+          </ul>
+        </div>
+        
+        <div class="modal-quote">
+          <p class="modal-quote-text">
+            "The training wasn't just informative—it was transformative. Our team thinks differently about AI governance now. Zeeshan doesn't just teach; he builds capability."
+          </p>
+          <p class="modal-quote-author">— Director of Modernization, Central Bank of Oman</p>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">Governance-First AI</span>
+          <span class="modal-framework-tag">NIST AI RMF</span>
+          <span class="modal-framework-tag">Knowledge Transfer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: BOOST KSA -->
+  <div class="modal-overlay" id="modal-boost" onclick="closeModal(event, 'boost')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'boost')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">📚</div>
+        <span class="modal-tag">Training • Saudi Arabia</span>
+        <h2 class="modal-title">BOOST KSA/NCM Training</h2>
+        <p class="modal-subtitle">Large-scale procurement transformation training for Saudi National Company Management</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">100+</span>
+          <span class="modal-stat-label">Professionals Trained</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">5</span>
+          <span class="modal-stat-label">Day Intensive</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">Vision</span>
+          <span class="modal-stat-label">2030 Aligned</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            Saudi Vision 2030 requires world-class procurement capabilities across government and state-owned enterprises. BOOST Consulting partnered to deliver intensive procurement transformation training for National Company Management (NCM) teams—building capability at scale across multiple ministries and organizations.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>5-day intensive ClarityOS and HumanOS methodology immersion</li>
+            <li>Capability Architect development—shifting from clerks to strategists</li>
+            <li>Real case studies from GCC procurement transformations</li>
+            <li>Hands-on AI in Procurement workshops with practical tools</li>
+            <li>Post-training capability sustainment framework</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>100+ procurement professionals trained across 8 organizations</li>
+            <li>Average capability assessment improvement of 3.2 points (out of 10)</li>
+            <li>90% of participants rated training as "transformative"</li>
+            <li>12 capability architects certified to train others</li>
+            <li>Framework adoption spreading across participating organizations</li>
+          </ul>
+        </div>
+        
+        <div class="modal-quote">
+          <p class="modal-quote-text">
+            "The ClarityOS methodology proved Culture > Code. Our teams now understand that transformation starts with identity, not software."
+          </p>
+          <p class="modal-quote-author">— Training Director, BOOST Consulting KSA</p>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">HumanOS™</span>
+          <span class="modal-framework-tag">ClarityOS™</span>
+          <span class="modal-framework-tag">Capability Architect</span>
+          <span class="modal-framework-tag">Knowledge Transfer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Defense -->
+  <div class="modal-overlay" id="modal-defense" onclick="closeModal(event, 'defense')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'defense')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">🎯</div>
+        <span class="modal-tag">Defense • KSA</span>
+        <h2 class="modal-title">National Defense Procurement Excellence</h2>
+        <p class="modal-subtitle">97.6% excellence rating through HumanOS and GovernanceOS implementation</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">97.6%</span>
+          <span class="modal-stat-label">Excellence Rating</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">$5.5M</span>
+          <span class="modal-stat-label">Efficiency Gains</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">200+</span>
+          <span class="modal-stat-label">Professionals Trained</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            A national defense procurement organization faced critical challenges: fragmented governance, limited visibility into supplier performance, compliance gaps with international standards, and a workforce operating as "order-takers" rather than strategic architects. With billions in annual procurement and zero margin for error, transformation couldn't disrupt mission-critical operations.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li><strong>Phase 1 (Months 1-3):</strong> HumanOS Assessment—identity and behavior transformation</li>
+            <li><strong>Phase 2 (Months 4-9):</strong> GovernanceOS™ implementation with NIST AI RMF alignment</li>
+            <li><strong>Phase 3 (Months 10-18):</strong> Capability Architect development across 200+ professionals</li>
+            <li>Zero-breach security protocols embedded in all processes</li>
+            <li>Continuous improvement framework with institutionalized governance</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>97.6% excellence rating in national defense procurement assessment</li>
+            <li>$5.5M in documented efficiency gains within 18 months</li>
+            <li>Procurement cycle time reduced by 40%</li>
+            <li>Supplier compliance improved from 67% to 96%</li>
+            <li>Audit readiness achieved with zero critical findings</li>
+            <li>Cross-functional collaboration improved by 55%</li>
+          </ul>
+        </div>
+        
+        <div class="modal-quote">
+          <p class="modal-quote-text">
+            "The transformation wasn't just about new processes—it was about fundamentally changing how we see ourselves as procurement professionals. Zeeshan's HumanOS approach made the difference between compliance and excellence."
+          </p>
+          <p class="modal-quote-author">— Senior Procurement Director, National Defense Organization</p>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">HumanOS™</span>
+          <span class="modal-framework-tag">GovernanceOS™</span>
+          <span class="modal-framework-tag">Capability Architect</span>
+          <span class="modal-framework-tag">Zero-Breach Procurement</span>
+          <span class="modal-framework-tag">NIST AI RMF</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Aviation AI -->
+  <div class="modal-overlay" id="modal-aviation" onclick="closeModal(event, 'aviation')">
+    <div class="modal-container" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal(event, 'aviation')">×</button>
+      
+      <div class="modal-hero">
+        <div class="modal-hero-icon">🚀</div>
+        <span class="modal-tag">Aviation • Oman</span>
+        <h2 class="modal-title">AI Governance-First Implementation</h2>
+        <p class="modal-subtitle">Deploying AI with guardrails intact from day one</p>
+      </div>
+      
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span class="modal-stat-number">100%</span>
+          <span class="modal-stat-label">Audit Ready</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">3x</span>
+          <span class="modal-stat-label">Faster Deployment</span>
+        </div>
+        <div class="modal-stat">
+          <span class="modal-stat-number">0</span>
+          <span class="modal-stat-label">Compliance Issues</span>
+        </div>
+      </div>
+      
+      <div class="modal-content">
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Challenge</h4>
+          <p class="modal-text">
+            A major aviation organization wanted to leverage AI for operations optimization but faced stringent regulatory requirements. With zero-tolerance for AI safety failures and high regulatory scrutiny, the industry average was daunting: 60% of AI projects fail due to governance gaps, and 80% that do launch create compliance issues within 18 months.
+          </p>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">The Solution</h4>
+          <ul class="modal-list">
+            <li>NIST AI Risk Management Framework implementation with aviation adaptations</li>
+            <li>Governance architecture built BEFORE model deployment</li>
+            <li>Risk-weighted deployment with phased rollout strategy</li>
+            <li>Human-in-the-Loop design—AI as augmentation, not replacement</li>
+            <li>Continuous monitoring with real-time governance health dashboards</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h4 class="modal-section-title">Key Results</h4>
+          <ul class="modal-list">
+            <li>AI system deployed 3x faster than industry average</li>
+            <li>Governance actually sped up deployment through clarity</li>
+            <li>Zero post-deployment compliance remediation required</li>
+            <li>Model performance transparency enabled stakeholder trust</li>
+            <li>Framework now adopted across aviation sector in region</li>
+          </ul>
+        </div>
+        
+        <div class="modal-frameworks">
+          <span class="modal-framework-tag">Governance-First AI</span>
+          <span class="modal-framework-tag">NIST AI RMF</span>
+          <span class="modal-framework-tag">Risk-Adjusted Innovation</span>
+          <span class="modal-framework-tag">HumanOS™</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="section" style="background: linear-gradient(180deg, var(--navy-900), var(--navy-800));">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <p class="text-caption text-kuantum mb-4">Client Voices</p>
+        <h2 class="text-h1 mb-6">What Clients Say</h2>
+      </div>
+      
+      <div class="grid grid-2 gap-6 stagger-children">
+        <div class="testimonial">
+          <p class="testimonial-text">
+            "Zeeshan's framework saved us 18 months of trial and error. What could have 
+            been a $2M learning experience became a structured, de-risked expansion with 
+            clear milestones and measurable outcomes."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CEO</div>
+            <div>
+              <p class="testimonial-name">Chief Executive Officer</p>
+              <p class="testimonial-role">European Technology Company, now in UAE & KSA</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <p class="testimonial-text">
+            "The governance-first approach transformed how we think about procurement. 
+            We didn't just save money—we built capabilities that will outlast any 
+            individual consultant."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CPO</div>
+            <div>
+              <p class="testimonial-name">Chief Procurement Officer</p>
+              <p class="testimonial-role">Major Industrial Conglomerate, Oman</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <p class="testimonial-text">
+            "His understanding of GCC business culture is unmatched. He bridges East-West 
+            dynamics with a respect that builds trust on both sides. That's rare."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">VP</div>
+            <div>
+              <p class="testimonial-name">Vice President, Regional Expansion</p>
+              <p class="testimonial-role">Global Aviation Manufacturer</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <p class="testimonial-text">
+            "The training wasn't just informative—it was transformative. Our team 
+            thinks differently about procurement now. Zeeshan doesn't just teach; 
+            he builds capability."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DM</div>
+            <div>
+              <p class="testimonial-name">Director of Modernization</p>
+              <p class="testimonial-role">Central Bank, GCC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKING ENGAGEMENTS -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <p class="text-caption text-clarity mb-4">Speaking & Events</p>
+        <h2 class="text-h1 mb-6">Sharing the Framework</h2>
+        <p class="text-body-lg">
+          Keynotes, workshops, and conferences across GCC markets spreading the 
+          HumanOS™ and GovernanceOS™ methodology.
+        </p>
+      </div>
+      
+      <div class="grid grid-3 gap-6 stagger-children">
+        <!-- Upcoming -->
+        <div class="card card-clarity">
+          <div style="padding: var(--space-2) var(--space-4); background: rgba(201, 162, 39, 0.2); border-radius: var(--radius-full); display: inline-block; margin-bottom: var(--space-4);">
+            <span class="text-small" style="color: var(--clarity-gold); font-weight: 600;">UPCOMING</span>
+          </div>
+          <p class="text-caption text-gray mb-2">February 9-10, 2026</p>
+          <h3 class="text-h4 mb-3">Kuwait Procurement Summit 2026</h3>
+          <p class="text-body mb-4">
+            Featured Speaker presenting "Governance OS: How GCC Procurement Leaders 
+            Move From Firefighting to Strategic Control"
+          </p>
+          <p class="text-small text-gray">Organized by CIPS MENA</p>
+          <div style="margin-top: var(--space-4);">
+            <span style="padding: var(--space-1) var(--space-3); background: rgba(201, 162, 39, 0.1); border-radius: var(--radius-full); font-size: 0.75rem; color: var(--clarity-gold);">📍 Kuwait</span>
+          </div>
+        </div>
+        
+        <!-- Past Event 1 -->
+        <div class="card card-kuantum">
+          <p class="text-caption text-gray mb-2">December 2025</p>
+          <h3 class="text-h4 mb-3">Riyadh Procurement Transformation</h3>
+          <p class="text-body mb-4">
+            5-day intensive ClarityOS implementation with leaders from across the Kingdom. 
+            Proving Culture > Code and building Capability Architects for Saudi Vision 2030.
+          </p>
+          <p class="text-small text-gray">BOOST Consulting and Training</p>
+          <div style="margin-top: var(--space-4);">
+            <span style="padding: var(--space-1) var(--space-3); background: rgba(229, 57, 53, 0.1); border-radius: var(--radius-full); font-size: 0.75rem; color: var(--kuantum-red);">📍 Riyadh, KSA</span>
+            <span style="padding: var(--space-1) var(--space-3); background: rgba(229, 57, 53, 0.1); border-radius: var(--radius-full); font-size: 0.75rem; color: var(--kuantum-red); margin-left: var(--space-2);">Saudi Vision 2030</span>
+          </div>
+        </div>
+        
+        <!-- Past Event 2 -->
+        <div class="card card-kuantum">
+          <p class="text-caption text-gray mb-2">2025</p>
+          <h3 class="text-h4 mb-3">Founders 2.0 Conference</h3>
+          <p class="text-body mb-4">
+            Awarded Entrepreneurial Excellence Award for innovative framework development 
+            and transformation leadership.
+          </p>
+          <div style="padding: var(--space-3); background: rgba(229, 57, 53, 0.1); border-radius: var(--radius-sm); margin-bottom: var(--space-4);">
+            <p class="text-small" style="color: var(--kuantum-red);">🏆 Entrepreneurial Excellence Award</p>
+          </div>
+          <div style="margin-top: var(--space-4);">
+            <span style="padding: var(--space-1) var(--space-3); background: rgba(229, 57, 53, 0.1); border-radius: var(--radius-full); font-size: 0.75rem; color: var(--kuantum-red);">📍 Dubai, UAE</span>
+          </div>
+        </div>
+        
+        <!-- Past Event 3 -->
+        <div class="card card-kuantum">
+          <p class="text-caption text-gray mb-2">July 2025</p>
+          <h3 class="text-h4 mb-3">AI in Procurement Workshop</h3>
+          <p class="text-body mb-4">
+            Intensive Doha session interrogating AI: Can it be trusted? Controlled? Scaled? 
+            Moving participants from fear to AI as strategic ally.
+          </p>
+          <p class="text-small text-gray">Serendib Training | SCMDOJO</p>
+          <div style="margin-top: var(--space-4);">
+            <span style="padding: var(--space-1) var(--space-3); background: rgba(229, 57, 53, 0.1); border-radius: var(--radius-full); font-size: 0.75rem; color: var(--kuantum-red);">📍 Doha, Qatar</span>
+          </div>
+        </div>
+        
+        <!-- Past Event 4 -->
+        <div class="card card-kuantum">
+          <p class="text-caption text-gray mb-2">Ongoing</p>
+          <h3 class="text-h4 mb-3">SCMDOJO Workshops</h3>
+          <p class="text-body mb-4">
+            Multiple procurement and AI governance workshops for the SCMDOJO professional 
+            network across GCC markets.
+          </p>
+          <div style="margin-top: var(--space-4);">
+            <span style="padding: var(--space-1) var(--space-3); background: rgba(229, 57, 53, 0.1); border-radius: var(--radius-full); font-size: 0.75rem; color: var(--kuantum-red);">📍 GCC Region</span>
+          </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="card" style="background: linear-gradient(135deg, rgba(229, 57, 53, 0.1), rgba(201, 162, 39, 0.1)); border: 1px solid rgba(255,255,255,0.1);">
+          <h3 class="text-h4 mb-4">Invite Zeeshan to Speak</h3>
+          <p class="text-body mb-6">
+            Available for keynotes, workshops, and panel discussions on governance-first 
+            AI, procurement transformation, and HumanOS methodology.
+          </p>
+          <a href="contact.html" class="btn btn-kuantum">Request Speaking Info →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section" style="background: linear-gradient(135deg, rgba(229, 57, 53, 0.1), rgba(10, 22, 40, 0.2));">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <h2 class="text-h1 mb-6">Ready for Your Transformation Story?</h2>
+        <p class="text-body-lg mb-8">
+          Let's discuss how these frameworks apply to your organization's specific challenges.
+          Every case study started with a conversation.
+        </p>
+        <div class="flex justify-center gap-4" style="flex-wrap: wrap;">
+          <a href="contact.html?type=discovery" class="btn btn-kuantum btn-lg">Schedule Discovery Call →</a>
+          <a href="kuantum.html" class="btn btn-secondary btn-lg">Explore Kuantum</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="assets/images/kuantum-logo-white.png" alt="Kuantum" style="height: 28px; width: auto;"></div>
+          <p class="footer-description">
+            Market access architecture for GCC markets. Personal clarity systems 
+            for complex decisions. Built by Zeeshan Sabri.
+          </p>
+          <div class="footer-social">
+            <a href="https://linkedin.com/in/zeeshan-sabri-75760a26" target="_blank" aria-label="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://instagram.com/zsabri" target="_blank" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@zsabri83" target="_blank" aria-label="TikTok">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <p class="footer-title">Kuantum</p>
+          <ul class="footer-links">
+            <li><a href="kuantum.html">Overview</a></li>
+            <li><a href="kuantum.html#gtm">GTM Strategy</a></li>
+            <li><a href="kuantum.html#pilot">Pilot Programs</a></li>
+            <li><a href="kuantum.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <p class="footer-title">ClarityOS</p>
+          <ul class="footer-links">
+            <li><a href="clarityos.html">Overview</a></li>
+            <li><a href="clarityos.html#how-it-works">How It Works</a></li>
+            <li><a href="clarityos.html#pricing">Pricing ($79)</a></li>
+            <li><a href="clarityos.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <p class="footer-title">Connect</p>
+          <ul class="footer-links">
+            <li><a href="about.html">About Zeeshan</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zeeshan Sabri. All rights reserved.</p>
+        <p>Built with clarity. Deployed with conviction.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  
+  <!-- Modal Scripts -->
+  <script>
+    function openModal(modalId) {
+      const modal = document.getElementById('modal-' + modalId);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    }
+    
+    function closeModal(event, modalId) {
+      // Close if clicking overlay or close button
+      if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('modal-close')) {
+        const modal = document.getElementById('modal-' + modalId);
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = ''; // Restore scrolling
+        }
+      }
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const activeModal = document.querySelector('.modal-overlay.active');
+        if (activeModal) {
+          activeModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
